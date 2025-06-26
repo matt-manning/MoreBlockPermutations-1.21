@@ -1,5 +1,8 @@
 package com.mbp;
 
+import com.mbp.block.ModBlocks;
+import com.mbp.item.ModItemGroups;
+import com.mbp.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,6 +14,9 @@ public class MoreBlockPermutations implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroups.registerItemGroups();
 
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
